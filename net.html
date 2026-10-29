@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Netflix</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="entete">
+    <a class="logo" href="#accueil">NETFLIX</a>
+    <div class="entete-droite">
+      <select aria-label="Langue">
+        <option>Français</option>
+        <option>العربية</option>
+        <option>English</option>
+      </select>
+      <a class="bouton bouton-petit" href="#abonnements">Se connecter</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="accueil" class="accueil">
+      <h1>Films, séries et bien plus en illimité.</h1>
+      <p>Regardez où vous voulez. Annulez quand vous voulez.</p>
+      <p>Prêt à regarder ? Entrez votre e-mail pour commencer.</p>
+      <div class="formulaire">
+        <input type="email" placeholder="Adresse e-mail" aria-label="Adresse e-mail">
+        <a class="bouton" href="#abonnements">Commencer</a>
+      </div>
+    </section>
+    <section id="tendances" class="section">
+      <h2>Tendances actuelles</h2>
+      <div class="rangee">
+        <article class="affiche affiche-1"><h3>Série 1</h3></article>
+        <article class="affiche affiche-2"><h3>Série 2</h3></article>
+        <article class="affiche affiche-3"><h3>Film 1</h3></article>
+        <article class="affiche affiche-4"><h3>Film 2</h3></article>
+        <article class="affiche affiche-5"><h3>Série 3</h3></article>
+      </div>
+    </section>
+    <section id="abonnements" class="section">
+      <h2>Choisissez votre abonnement</h2>
+      <div class="grille">
+        <article class="offre">
+          <h3>Basique</h3>
+          <p class="prix">9 DT <span>/ mois</span></p>
+          <ul>
+            <li>Qualité standard</li>
+            <li>1 écran à la fois</li>
+          </ul>
+          <a class="bouton" href="#">Choisir</a>
+        </article>
+        <article class="offre offre-vedette">
+          <h3>Standard</h3>
+          <p class="prix">15 DT <span>/ mois</span></p>
+          <ul>
+            <li>Full HD</li>
+            <li>2 écrans à la fois</li>
+          </ul>
+          <a class="bouton" href="#">Choisir</a>
+        </article>
+        <article class="offre">
+          <h3>Premium</h3>
+          <p class="prix">20 DT <span>/ mois</span></p>
+          <ul>
+            <li>Ultra HD</li>
+            <li>4 écrans à la fois</li>
+          </ul>
+          <a class="bouton" href="#">Choisir</a>
+        </article>
+      </div>
+    </section>
+    <section id="faq" class="section">
+      <h2>Questions fréquentes</h2>
+      <details>
+        <summary>Qu'est-ce que Netflix ?</summary>
+        <p>Un service qui permet de regarder des films et des séries sur tous vos écrans, sans publicité.</p>
+      </details>
+      <details>
+        <summary>Combien ça coûte ?</summary>
+        <p>De 9 à 20 DT par mois selon l'abonnement. Sans engagement.</p>
+      </details>
+      <details>
+        <summary>Où puis-je regarder ?</summary>
+        <p>Sur téléphone, tablette, ordinateur et télévision connectée.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="pied">
+    <p>Projet étudiant HTML/CSS – redesign à but pédagogique. © 2026</p>
+  </footer>
+
+</body>
+</html>

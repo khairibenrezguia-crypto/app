@@ -1,0 +1,243 @@
+/* =====================================================
+   LE THÈME
+   Thème d'origine (pour comparer dans ton rapport) :
+   fond noir #141414, accent rouge #e50914.
+   NOUVEAU thème : bleu nuit + turquoise + jaune.
+   Modifier ces variables change tout le site.
+   ===================================================== */
+:root {
+  --fond: #0b1a33;          /* bleu nuit */
+  --surface: #13294b;       /* bleu plus clair pour les cartes */
+  --texte: #f4f7fb;
+  --texte-doux: #b7c4d9;
+  --accent: #2ec4b6;        /* turquoise */
+  --accent-2: #ffb703;      /* jaune */
+
+  --police-titres: "Trebuchet MS", Verdana, sans-serif;
+  --police-texte: Arial, Helvetica, sans-serif;
+}
+
+/* RÉGLAGES DE BASE */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--fond);
+  color: var(--texte);
+  font-family: var(--police-texte);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--police-titres);
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible,
+input:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--accent-2);
+  outline-offset: 3px;
+}
+
+/* BOUTONS */
+.bouton {
+  display: inline-block;
+  padding: 14px 28px;
+  background: var(--accent);
+  color: var(--fond);
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.bouton:hover {
+  background: var(--accent-2);
+}
+
+.bouton-petit {
+  padding: 8px 18px;
+}
+
+/* EN-TÊTE */
+.entete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 16px 32px;
+  background: var(--fond);
+}
+
+.logo {
+  font-family: var(--police-titres);
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.entete-droite {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.entete select {
+  padding: 8px;
+  background: var(--surface);
+  color: var(--texte);
+  border: 1px solid var(--texte-doux);
+  border-radius: 6px;
+}
+
+/* ACCUEIL */
+.accueil {
+  padding: 96px 24px;
+  text-align: center;
+  background: linear-gradient(180deg, var(--surface), var(--fond));
+}
+
+.accueil h1 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  max-width: 14em;
+  margin: 0 auto 16px;
+}
+
+.accueil p {
+  margin-bottom: 12px;
+  color: var(--texte-doux);
+  font-size: 1.1rem;
+}
+
+.formulaire {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.formulaire input {
+  width: min(100%, 340px);
+  padding: 14px;
+  background: var(--fond);
+  color: var(--texte);
+  border: 1px solid var(--texte-doux);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* SECTIONS */
+.section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 56px 24px;
+}
+
+.section h2 {
+  margin-bottom: 24px;
+  font-size: 1.8rem;
+}
+
+/* TENDANCES : rangée qui défile à l'horizontale */
+.rangee {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+}
+
+.affiche {
+  flex: 0 0 170px;
+  height: 240px;
+  display: flex;
+  align-items: flex-end;
+  padding: 14px;
+  border-radius: 10px;
+}
+
+.affiche h3 {
+  font-size: 1.1rem;
+}
+
+.affiche-1 { background: linear-gradient(160deg, #2ec4b6, #13294b); }
+.affiche-2 { background: linear-gradient(160deg, #ffb703, #7a3e00); }
+.affiche-3 { background: linear-gradient(160deg, #6c63ff, #13294b); }
+.affiche-4 { background: linear-gradient(160deg, #ef476f, #3a0d1f); }
+.affiche-5 { background: linear-gradient(160deg, #06d6a0, #034d3a); }
+
+/* ABONNEMENTS */
+.grille {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.offre {
+  padding: 28px;
+  background: var(--surface);
+  border-radius: 12px;
+}
+
+.offre-vedette {
+  border: 2px solid var(--accent-2);
+}
+
+.offre .prix {
+  margin: 8px 0 16px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.offre .prix span {
+  font-size: 1rem;
+  font-weight: normal;
+  color: var(--texte-doux);
+}
+
+.offre ul {
+  margin-bottom: 24px;
+  padding-left: 20px;
+  color: var(--texte-doux);
+}
+
+/* FAQ */
+details {
+  margin-bottom: 8px;
+  background: var(--surface);
+  border-radius: 8px;
+}
+
+summary {
+  padding: 16px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+details p {
+  padding: 0 20px 16px;
+  color: var(--texte-doux);
+}
+
+/* PIED DE PAGE */
+.pied {
+  padding: 24px;
+  text-align: center;
+  color: var(--texte-doux);
+  border-top: 1px solid var(--surface);
+}
